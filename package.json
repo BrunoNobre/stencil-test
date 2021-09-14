@@ -1,9 +1,9 @@
 {
-  "name": "test-stencil",
-  "version": "0.0.1",
+  "name": "test-stencil-test",
+  "version": "1.0.5",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BrunoNobre/stencil-test"
+    "url": "https://github.com/BrunoNobre/stencil-test.git"
   },
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@stencil/react-output-target": "0.0.12",
     "@types/jest": "^26.0.24",
+    "google-charts": "^2.0.0",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
     "puppeteer": "^10.0.0"

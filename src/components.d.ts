@@ -20,6 +20,12 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SaSimulator {
+    }
+    interface SaSimulatorChart {
+    }
+    interface SaSimulatorForm {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +34,29 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSaSimulatorElement extends Components.SaSimulator, HTMLStencilElement {
+    }
+    var HTMLSaSimulatorElement: {
+        prototype: HTMLSaSimulatorElement;
+        new (): HTMLSaSimulatorElement;
+    };
+    interface HTMLSaSimulatorChartElement extends Components.SaSimulatorChart, HTMLStencilElement {
+    }
+    var HTMLSaSimulatorChartElement: {
+        prototype: HTMLSaSimulatorChartElement;
+        new (): HTMLSaSimulatorChartElement;
+    };
+    interface HTMLSaSimulatorFormElement extends Components.SaSimulatorForm, HTMLStencilElement {
+    }
+    var HTMLSaSimulatorFormElement: {
+        prototype: HTMLSaSimulatorFormElement;
+        new (): HTMLSaSimulatorFormElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "sa-simulator": HTMLSaSimulatorElement;
+        "sa-simulator-chart": HTMLSaSimulatorChartElement;
+        "sa-simulator-form": HTMLSaSimulatorFormElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +74,17 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SaSimulator {
+    }
+    interface SaSimulatorChart {
+    }
+    interface SaSimulatorForm {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "sa-simulator": SaSimulator;
+        "sa-simulator-chart": SaSimulatorChart;
+        "sa-simulator-form": SaSimulatorForm;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +92,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "sa-simulator": LocalJSX.SaSimulator & JSXBase.HTMLAttributes<HTMLSaSimulatorElement>;
+            "sa-simulator-chart": LocalJSX.SaSimulatorChart & JSXBase.HTMLAttributes<HTMLSaSimulatorChartElement>;
+            "sa-simulator-form": LocalJSX.SaSimulatorForm & JSXBase.HTMLAttributes<HTMLSaSimulatorFormElement>;
         }
     }
 }
