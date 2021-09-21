@@ -9,7 +9,7 @@ import {GoogleCharts} from 'google-charts';
 export class SaSimulatorChart {
  @Element() private element: HTMLElement;
 
- @Prop() data = {};
+ @Prop() data: any;
 
   componentDidLoad() {
     this.createPieChart(this.element);

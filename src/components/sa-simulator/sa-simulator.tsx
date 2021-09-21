@@ -1,4 +1,4 @@
-import { Component, Host, h, Method, State } from '@stencil/core';
+import { Component, Host, h, State } from '@stencil/core';
 
 @Component({
   tag: 'sa-simulator',
@@ -7,9 +7,9 @@ import { Component, Host, h, Method, State } from '@stencil/core';
 })
 export class SaSimulator {
 
-  @State() respData = {}
+  @State() respData = false;
 
-  async action (body) {
+  action = async (body: any) => {
     try {
       const response = await fetch("", {
         method: 'POST',
@@ -22,6 +22,7 @@ export class SaSimulator {
     } catch (error) {
       console.log(error);
     }
+    this.respData = true;
     
   }
 
@@ -31,7 +32,7 @@ export class SaSimulator {
         <slot>
           <html>
             <sa-simulator-form action={this.action}></sa-simulator-form>
-            <sa-simulator-chart data={this.respData}></sa-simulator-chart>
+            {!!this.respData ? <sa-simulator-chart data={this.respData}></sa-simulator-chart> : ''}
           </html>
         </slot>
       </Host>
