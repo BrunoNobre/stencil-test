@@ -1,4 +1,4 @@
-import { Component, Element, Host, h } from '@stencil/core';
+import { Component, Element, Host, h, Prop } from '@stencil/core';
 import {GoogleCharts} from 'google-charts';
 
 @Component({
@@ -8,6 +8,8 @@ import {GoogleCharts} from 'google-charts';
 })
 export class SaSimulatorChart {
  @Element() private element: HTMLElement;
+
+ @Prop() data = {};
 
   componentDidLoad() {
     this.createPieChart(this.element);

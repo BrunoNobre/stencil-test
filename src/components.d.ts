@@ -23,8 +23,10 @@ export namespace Components {
     interface SaSimulator {
     }
     interface SaSimulatorChart {
+        "data": {};
     }
     interface SaSimulatorForm {
+        "action": any;
     }
 }
 declare global {
@@ -77,8 +79,10 @@ declare namespace LocalJSX {
     interface SaSimulator {
     }
     interface SaSimulatorChart {
+        "data"?: {};
     }
     interface SaSimulatorForm {
+        "action"?: any;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
