@@ -1,14 +1,101 @@
-:host {
-  display: block;
+body {
+  color: #7f7f80;
+  font-size: 0.875rem;
+}
+
+input {
+  padding: 7px;
+  border: 0.5px solid #bbbbbb;
+  border-radius: 5px;
+  color: #7f7f80;
+  width: 250px;
+}
+
+input::placeholder {
+  color: #bbbbbb;
+}
+
+input[type='radio']  {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 1px;
+  background-clip: content-box;
+  border: 0.5px solid #bbbbbb;
+  border-radius: 50%;
+  background-color: #ffff;
+  margin-right: 5px;
+  margin-left: 0px;
+  margin-top: 3px;
+  color: #7f7f80;
+}
+
+input[type='radio']:checked {
+  background-color: #505152;
+}
+
+h4, h3 {
+  color: #505152;
+  font-weight: bold;
+  display: flex;
 }
 
 h4 {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-h4,
+.root {
+  padding: 20px;
+}
+
+.form-type {
+  display: flex;
+}
+
+.form-type > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 23px;
+}
+
 .display-row {
   display: flex;
+  align-items: center;
+}
+
+.styled-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.styled-input > label {
+  margin-bottom: 5px;
+}
+
+.btn-sub {
+  padding: 12px 60px;
+  text-align: center;
+  color: white;
+  background-color: #505152;
+  margin-top: 45px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: none;
+  border: none;
+}
+
+.card {
+  width: min-content;
+  height: min-content;
+  text-align: left;
+  padding: 15px;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  margin-left: 40px;
 }
 
 .number {
